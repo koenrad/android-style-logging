@@ -1,0 +1,25 @@
+{
+  "name": "android-style-logging",
+  "version": "1.0.0",
+  "description": "A console logging implementation for Node modeled after the functionality of the Android Log class.",
+  "main": "src/android-style-logging.js",
+  "scripts": {
+    "test": "node ./test/android-style-logging-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koenrad/android-style-logging.git"
+  },
+  "keywords": [
+    "node",
+    "logging",
+    "node",
+    "logging"
+  ],
+  "author": "Koenrad MacBride",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koenrad/android-style-logging/issues"
+  },
+  "homepage": "https://github.com/koenrad/android-style-logging#readme"
+}
