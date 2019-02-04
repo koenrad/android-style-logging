@@ -1,0 +1,60 @@
+{
+  "colors":{
+    "v": {
+      "tag": {
+        "fgColor": "white",
+        "bgColor": "black"
+      },
+      "message": {
+        "fgColor": "[38;5;192m"
+      }
+    },
+    "d": {
+      "tag": {
+        "fgColor": "white",
+        "bgColor": "black"
+      },
+      "message": {
+        "fgColor": "white",
+        "bgColor": "red"
+      }
+    },
+    "i": {
+      "tag": {
+        "fgColor": "black",
+        "bgColor": "cyan"
+      },
+      "message": {
+        "fgColor": "cyan",
+        "bgColor": "[38;5;1m"
+      }
+    },
+    "w": {
+      "tag": {
+        "fgColor": "black",
+        "bgColor": "yellow"
+      },
+      "message": {
+        "fgColor": "yellow",
+        "bgColor": "[38;5;16m"
+      }
+    },
+    "e": {
+      "tag": {
+        "bgColor": "red"
+      },
+      "message": {
+        "fgColor": "red"
+      }
+    }
+  },
+  "enabled": {
+    "v": false,
+    "d": true,
+    "i": true,
+    "w": false,
+    "e": true
+  },
+  "showSettings": true,
+  "showExample": true
+}
