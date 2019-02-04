@@ -12,25 +12,25 @@ class Log {
     this._resetColor = '\x1b[0m'
     //Using 8-bit colors
     this._fgColors = {
-      black : '[38;5;232m',
-      red : '[38;5;196m',
-      green : '[38;5;46m',
-      yellow : '[38;5;226m',
-      blue : '[38;5;39m',
-      magenta : '[38;5;201m',
-      cyan : '[38;5;87m',
-      white : '[38;5;231m'
+      black: '[38;5;232m',
+      red: '[38;5;196m',
+      green: '[38;5;46m',
+      yellow: '[38;5;226m',
+      blue: '[38;5;39m',
+      magenta: '[38;5;201m',
+      cyan: '[38;5;87m',
+      white: '[38;5;231m'
     }
 
     this._bgColors = {
-      black : '[48;5;232m',
-      red : '[48;5;160m',
-      green : '[48;5;28m',
-      yellow : '[48;5;226m',
-      blue : '[48;5;21m',
-      magenta : '[48;5;93m',
-      cyan : '[48;5;87m',
-      white : '[48;5;231m',
+      black: '[48;5;232m',
+      red: '[48;5;160m',
+      green: '[48;5;28m',
+      yellow: '[48;5;226m',
+      blue: '[48;5;21m',
+      magenta: '[48;5;93m',
+      cyan: '[48;5;87m',
+      white: '[48;5;231m',
     }
 
     //Load Defaults
@@ -71,7 +71,7 @@ class Log {
   }
 
   showCurrentSettings() {
-    this.log(this._colors.i, this._TAG, '\nCurrent Settings\nenabled: ' + JSON.stringify(this._enabled, null, 2) + '\ncolors: ' + JSON.stringify(this._colors, null, 2) )
+    this.log(this._colors.i, this._TAG, '\nCurrent Settings\nenabled: ' + JSON.stringify(this._enabled, null, 2) + '\ncolors: ' + JSON.stringify(this._colors, null, 2))
   }
 
   showExamples() {
@@ -87,16 +87,16 @@ class Log {
     this.log(this._colors.e, "this is an error message with no tag")
   }
 
-  showfgColors () {
+  showfgColors() {
     for (var i = 0; i < 256; i++) {
-      console.log('\x1b[38;5;%smThis fgcolor is \"[38;5;%sm\"', i.toString(), i.toString())
+      console.log('\x1b[38;5;%smThis fgColor is \"[38;5;%sm\"', i.toString(), i.toString())
     }
     console.log(this._resetColor)
   }
 
   showbgColors() {
     for (var i = 0; i < 256; i++) {
-      console.log('\x1b[48;5;%smThis bgcolor is \"[48;5;%sm\"', i.toString(), i.toString())
+      console.log('\x1b[48;5;%smThis bgColor is \"[48;5;%sm\"', i.toString(), i.toString())
     }
     console.log(this._resetColor)
   }
@@ -111,35 +111,35 @@ class Log {
 
   v(tag, msg) {
     if (this._enabled.v) {
-      this.log(this._colors.v, tag , msg)
+      this.log(this._colors.v, tag, msg)
     }
   }
 
   d(tag, msg) {
     if (this._enabled.d) {
-      this.log(this._colors.d, tag , msg)
+      this.log(this._colors.d, tag, msg)
     }
   }
 
   i(tag, msg) {
     if (this._enabled.i) {
-      this.log(this._colors.i, tag , msg)
+      this.log(this._colors.i, tag, msg)
     }
   }
 
   w(tag, msg) {
     if (this._enabled.w) {
-      this.log(this._colors.w, tag , msg)
+      this.log(this._colors.w, tag, msg)
     }
   }
 
   e(tag, msg) {
     if (this._enabled.e) {
-      this.log(this._colors.e, tag , msg)
+      this.log(this._colors.e, tag, msg)
     }
   }
 
-  log(colors, tag , msg) {
+  log(colors, tag, msg) {
     //double check to make sure both everything exists'
     if (!colors.tag) {
       colors.tag = {}
@@ -174,7 +174,7 @@ class Log {
     console.log(fmt, tag, msg)
   }
 
-  checkFgColor (color) {
+  checkFgColor(color) {
     if (color == '') return color
     if (color in this._fgColors) {
       color = this._fgColors[color]
@@ -183,7 +183,7 @@ class Log {
     return '\x1b' + color
   }
 
-  checkBgColor (color) {
+  checkBgColor(color) {
     if (color == '') return color
     if (color in this._bgColors) {
       color = this._bgColors[color]
