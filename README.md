@@ -48,8 +48,8 @@ log.e(TAG, "This should show up as an error output")
 | e        | (TAG \<optional>, MSG) | error output |
 |showfgColors |  | displays all possible foreground colors |
 |showbgColors | | displays all possible background colors |
-|setColor | (colorObject) | displays all possible background colors |
-|setEnabled | (enabledObject) | displays all possible background colors |
+|setColor | (colorObject) | change color options |
+|setEnabled | (enabledObject) | change which log levels are enabled/disabled |
 
 ### Color Formats
 
