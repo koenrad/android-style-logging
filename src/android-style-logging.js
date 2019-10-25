@@ -110,31 +110,31 @@ class Log {
   }
 
   v(tag, msg) {
-    if (this._enabled.v) {
+    if (this._enabled.v || this.envFlag('v')) {
       this.log(this._colors.v, tag, msg)
     }
   }
 
   d(tag, msg) {
-    if (this._enabled.d) {
+    if (this._enabled.d || this.envFlag('d')) {
       this.log(this._colors.d, tag, msg)
     }
   }
 
   i(tag, msg) {
-    if (this._enabled.i) {
+    if (this._enabled.i || this.envFlag('i')) {
       this.log(this._colors.i, tag, msg)
     }
   }
 
   w(tag, msg) {
-    if (this._enabled.w) {
+    if (this._enabled.w || this.envFlag('w')) {
       this.log(this._colors.w, tag, msg)
     }
   }
 
   e(tag, msg) {
-    if (this._enabled.e) {
+    if (this._enabled.e || this.envFlag('e')) {
       this.log(this._colors.e, tag, msg)
     }
   }
@@ -172,6 +172,10 @@ class Log {
       fmt = msgfgColor + msgbgColor + "%s%s" + this._resetColor
     }
     console.log(fmt, tag, msg)
+  }
+
+  envFlag(flag) {
+    return process.env.ASL_LOG ? process.env.ASL_LOG.toLowerCase().includes(flag.toLowerCase()) : false;
   }
 
   checkFgColor(color) {

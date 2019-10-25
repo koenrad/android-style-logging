@@ -1,10 +1,11 @@
 {
   "name": "android-style-logging",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A console logging implementation for Node modeled after the functionality of the Android Log class.",
   "main": "src/android-style-logging.js",
   "scripts": {
-    "test": "node ./test/android-style-logging-test.js"
+    "test": "node ./test/android-style-logging-test.js",
+    "testenv": "cross-env ASL_LOG=ve node ./test/android-style-logging-test.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/koenrad/android-style-logging/issues"
   },
-  "homepage": "https://github.com/koenrad/android-style-logging#readme"
+  "homepage": "https://github.com/koenrad/android-style-logging#readme",
+  "devDependencies": {
+    "cross-env": "^6.0.3"
+  }
 }

@@ -5,14 +5,22 @@
  * MIT Licensed
  */
 
- const Log = require('../src/android-style-logging')
+const Log = require('../src/android-style-logging')
+
+const TAG = 'AndroidStyleLogging'
 
 let logging_options = {
   //conf: require('./test-settings.json')
-  conf: require('../config/default')
+  conf: require('../config/disabled')
 }
 
-const log = new Log();
+const log = new Log(logging_options);
+
+log.v(TAG, "This should show up")
+log.d(TAG, "This should show up")
+log.i(TAG, "This should show up")
+log.w(TAG, "This should show up")
+log.e(TAG, "This should show up")
 
 /*
 const log = new Log({
