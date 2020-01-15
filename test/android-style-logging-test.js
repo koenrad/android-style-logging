@@ -11,7 +11,7 @@ const TAG = 'AndroidStyleLogging'
 
 let logging_options = {
   //conf: require('./test-settings.json')
-  conf: require('../config/disabled')
+  //conf: require('../config/disabled')
 }
 
 const log = new Log(logging_options);

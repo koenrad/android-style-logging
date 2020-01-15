@@ -1,4 +1,4 @@
-{
+module.exports = {
   "colors":{
     "v": {
       "tag": {
@@ -52,11 +52,11 @@
     }
   },
   "enabled": {
-    "v": false,
-    "d": false,
-    "i": false,
+    "v": true,
+    "d": true,
+    "i": true,
     "w": true,
-    "e": false
+    "e": true
   },
   "showSettings": false,
   "showExample": false

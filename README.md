@@ -23,7 +23,7 @@ npm i android-style-logging
 
 ``` javascript
 const Log = require('android-style-logging')
-const log = new Log({ conf: require('./my-log-settings-file.json') });
+const log = new Log();
 const TAG = 'ASL'
 
 log.v(TAG, "This should show up as a verbose output")
@@ -74,8 +74,24 @@ ASL_LOG=ive node app.js
 ```
 
 ### Default Config
-```json
-{
+
+The [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) package is used for runtime configuration. Create an RC file in your project root directory to overwrite any settings that you wish to modify.
+
+You can also pass in a configuration object when instantiating a Log object:
+
+```JavaScript
+const configObject = {
+  "showExample": true
+}
+const Log = require('android-style-logging')
+const log = new Log(configObject);
+```
+
+The default configuration is:
+
+`.androidstyleloggingrc.js` 
+```JavaScript
+module.exports = {
   "colors":{
     "v": {
       "tag": {
